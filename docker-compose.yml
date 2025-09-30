@@ -44,3 +44,10 @@ services:
     volumes:
       - ./front:/app
 
+  web:
+    container_name: web_desafio
+    image: nginx:alpine
+    ports:
+      - "8081:80"
+    volumes:
+      - ./front:/usr/share/nginx/html:ro

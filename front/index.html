@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suite Store</title>
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+ 
+</head>
+<body>
+  <header>
+    <h1><a href="index.html">Suite Store</a></h1>
+    <nav id="menu">
+      <ul>
+        <li><a href="categories.html">Categorias</a></li>
+        <li><a href="products.html">Produtos</a></li>
+        <li><a href="history.html">Histórico de Vendas</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home">
+      <h2>Loja</h2>
+          <form>
+            <span>Produto: <span style="color:red">*</span>
+              <select id="cb-products">
+              <option value="" >Selecione o produto</option>
+              </select>
+            </span><br>
+            <span>
+              <label for="storeProductAmount">Quantidade: <span style="color:red">*</span></label>
+              <input type="number" id="storeProductAmount" min="0" oninput="validity.valid||(value='');"/></span><br>
+            <span>Imposto (%): <input type="text" id="taxPercentage" readonly/></span><br>
+            <span>Valor unitário: <input type="text" id="unitPriceCart" readonly/></span><br>
+          </form>
+          <button id="saveButton" class="formButton">Adicionar produto</button>
+          
+          <table class="topright">
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Valor unitário</th>
+                  <th>Quantidade</th>
+                  <th>Imposto</th>
+                  <th>Subtotal</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody id="shoppingCartListBody">
+              </tbody>
+          </table>
+          <div class="summary">
+            <span>Imposto: <input type="text" id="totalTaxInput" readonly/></span><br>
+            <span>Total: <input type="text" id="totalPurchaseInput" readonly/></span><br>
+            <button id="finish">Finalizar compra</button>
+            <button id="cancel">Cancelar</button>
+          </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

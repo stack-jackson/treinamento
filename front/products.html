@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Suite Store</title>
+  <link rel="stylesheet" type="text/css" href="src/css/style.css">
+</head>
+<body>
+  <header id="header">
+    <h1><a href="index.html">Suite Store</a></h1>
+    <nav id="menu">
+      <ul>
+        <li><a href="categories.html">Categorias</a></li>
+        <li><a href="products.html">Produtos</a></li>
+        <li><a href="history.html">Histórico de Vendas</a></li>
+      </ul>
+    </nav>
+  </header>
+    <main>
+        <!-- PRODUTOS -->
+        <section id="prodEdition">
+            <h2>Produtos</h2>
+            <form>
+              <span>
+                <label for="productName">Nome do produto: <span style="color:red">*</span></label>
+                <input type="text" id="productName"/></span><br>
+              <span>
+                <label for="productAmount">Quantidade: <span style="color:red">*</span></label>
+                <input type="number" id="productAmount" min="0" oninput="validity.valid||(value='');"/></span><br>
+              <span>
+                <label for="productPrice">Valor unitário: <span style="color:red">*</span></label>
+                <input type="number" id="productPrice" min="0" oninput="validity.valid||(value='');" step=".01"/></span><br>
+              <span> Categoria: <span style="color:red">*</span>
+                <select id="cb-categories">
+                </select>
+              </span><br>
+            </form>
+            <button id="saveButton" type="submit" class="formButton">Salvar produto</button>
+        </section>
+        <section>
+            <table class="topright">
+            <thead>
+                <tr>
+                  <th>Código Identificador</th>
+                  <th>Produto</th>
+                  <th>Quantidade</th>
+                  <th>Valor unitário</th>
+                  <th>Categoria</th>
+                  <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="productsListBody">
+            </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="products.js"></script>
+</body>
+</html>
